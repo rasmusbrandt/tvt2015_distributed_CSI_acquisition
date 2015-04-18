@@ -14,6 +14,8 @@ Several distributed coordinated precoding methods exist in the downlink multicel
 ## Description of simulations
 The simulations are placed in two folders, `PracticalTDD` and `PracticalTDD_largescale`. The former contains the simulations for the canonical interering broadcast channel, whereas the latter contain the simulations for the large-scale 3-cell network.
 
+The plot commands require that [export_fig](https://www.mathworks.com/matlabcentral/fileexchange/23629-export-fig) from the Matlab File Exchange is installed.
+
 ## Running the simulations
 1. `cd` into the base directory and run `setup` from within Matlab
 2. `cd PracticalTDD/batches` or `cd PracticalTDD_largescale/batches`
