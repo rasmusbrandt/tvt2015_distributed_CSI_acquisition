@@ -1,0 +1,53 @@
+function [plots,legend_handle] = rmsbrt_plot(X,Y,legends,legend_location,legend_font_size,plot_line_widths,plot_line_styles,plot_line_colours,plot_marker_sizes,plot_marker_types,plot_marker_face_colour,plot_marker_edge_colour)
+
+Np = length(X);
+
+% ===============
+% Plotting
+% ===============
+
+
+for plot_ind = 1:Np
+plots{plot_ind} = plot(X{plot_ind},Y{plot_ind},             ...
+    'LineStyle',       plot_line_styles{plot_ind},          ...
+    'LineWidth',       plot_line_widths(plot_ind),          ...
+    'Color',           plot_line_colours(plot_ind,:),       ...
+    'Marker',          plot_marker_types{plot_ind},         ...
+    'MarkerSize',      plot_marker_sizes(plot_ind),         ...
+    'MarkerFaceColor', plot_marker_face_colour(plot_ind,:), ...
+    'MarkerEdgeColor', plot_marker_edge_colour(plot_ind,:));
+end
+    
+
+% ===============
+% Legend
+% ===============
+
+
+legend_orientation      = 'vertical'; % [{vertical} horizontal]
+
+legend_box = 'on'; % [{on} off]
+legend_colour = rgb('White'); % none => transparent
+
+legend_edge_colour = rgb('Black'); % RGB
+legend_text_colour = rgb('Black'); % RGB
+legend_interpreter = 'tex';
+
+legend_plot_handles = zeros(length(legends),1);
+for n = 1:length(legends)
+    tmp = plots{n};
+    legend_plot_handles(n) = tmp(1);
+end
+
+legend_handle = legend( legend_plot_handles,                      ...
+        legends,                                  ...
+        'Location',           legend_location,    ...
+        'Orientation',        legend_orientation, ...
+        'Box',                legend_box,         ... 
+        'Color',              legend_colour,      ... 
+        'EdgeColor',          legend_edge_colour, ... 
+        'TextColor',          legend_text_colour, ... 
+        'Interpreter',        legend_interpreter, ...
+        'FontSize',           legend_font_size);
+
+end

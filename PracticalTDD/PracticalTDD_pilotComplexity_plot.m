@@ -1,0 +1,23 @@
+figure; subplot(1,2,1);
+plot(Nps,mean(sum(pilotComplexity_prec_maxrate,1),3),'b', ...
+	   Nps,mean(sum(pilotComplexity_precGLOB_maxrate,1),3),'r', ...
+	   Nps,mean(sum(pilotComplexity_full_maxrate,1),3),'m');
+xlabel('Pilot length Np'); ylabel('Average sum rate [bits/s/Hz]');
+legend('Prec', 'PrecGLOB', 'Full');
+
+subplot(1,2,2);
+plot(Nps,pilotComplexity_prec_flops,'b', ...
+     Nps,pilotComplexity_precGLOB_flops,'r', ...
+     Nps,pilotComplexity_full_flops,'m',...
+		 Nps,pilotComplexity_RBWMMSE_flops,'k');
+xlabel('Pilot length Np'); ylabel('Flops');
+legend('Prec', 'PrecGLOB', 'Full','RBWMMSE');
+
+% figure;
+% [haxes,hline1,hline2] = plotyy(Nps,mean(sum(pilotComplexity_prec_maxrate,1),3), ...
+% 	     Nps,mean(pilotComplexity_flops,2)); hold on;
+% plot(Nps,mean(sum(pilotComplexity_precGLOB_maxrate,1),3),'r', ...
+% 	   Nps,mean(sum(pilotComplexity_full_maxrate,1),3),'m');
+% xlabel('Pilot length Np');
+% ylabel(haxes(1),'Average sum rate [bits/s/Hz]');
+% ylabel(haxes(2),'Flops');
