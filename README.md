@@ -55,7 +55,7 @@ This source code is licensed under the [MIT][mit] license. If you in any way use
 @Article{Brandt2015accepted,
   Title                    = {Distributed {CSI} Acquisition and Coordinated Precoding for {TDD} Multicell {MIMO} Systems},
   Author                   = {R. Brandt and M. Bengtsson},
-  Journal                  = {IEEE} Trans. Veh. Technol.,
+  Journal                  = {{IEEE} Trans. Veh. Technol.},
   Year                     = {2015},
   Note                     = {Accepted for publication}
 }
