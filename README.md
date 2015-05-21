@@ -2,8 +2,8 @@ tvt2015_distributed_CSI_acquisition
 ====
 
 **tvt2015_distributed_CSI_acquisition** is the simulation environment for
-> [R. Brandt][rabr5411] and [M. Bengtsson][matben]. "Distributed CSI Acquisition and Coordinated
-Precoding for TDD Multicell MIMO Systems". *Trans. Veh. Technol.*, 2015. Accepted for publication.
+> [R. Brandt][rabr5411] and [M. Bengtsson][matben]. "[Distributed CSI Acquisition and Coordinated
+Precoding for TDD Multicell MIMO Systems][diva]". *Trans. Veh. Technol.*, 2015. Accepted for publication.
 
 It provides all the simulation code and scripts required to reproduce the 
 figures from the paper.
@@ -63,5 +63,6 @@ This source code is licensed under the [MIT][mit] license. If you in any way use
 
 [rabr5411]: http://www.kth.se/profile/rabr5411
 [matben]: http://www.kth.se/profile/matben
+[diva]: http://kth.diva-portal.org/smash/get/diva2:811008/FULLTEXT01.pdf
 [mit]: http://choosealicense.com/licenses/mit
 [bibtex]: http://www.bibtex.org/
